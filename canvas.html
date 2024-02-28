@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Example</title>
+  <style>
+    body{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+  
+    }
+  </style>
+</head>
+<body>
+  <canvas id="can" height="300" width="400" style="border: 2px solid black">
+  </canvas>
+  <script>
+    var canvas = document.getElementById("can");
+    var c = canvas.getContext("2d");
+
+    //Rectangle
+    c.beginPath();
+    c.strokeStyle = 'black';
+    c.strokeRect(5, 5, 100, 25);
+    c.stroke();
+    c.closePath();
+    
+    //Circle
+    c.beginPath();
+    c.arc(140, 35, 30, 0, 2 * Math.PI);
+    c.fillStyle = 'red';
+    c.fill();
+    c.strokeStyle = 'green';
+    c.stroke();
+    c.closePath();
+    
+    //Long Line
+    c.beginPath();
+    c.moveTo(400, 0);
+    c.lineTo(0, 300);
+    c.strokeStyle = 'red';
+    c.stroke();
+    c.closePath();
+    
+    //Square
+    c.beginPath();
+    c.fillStyle = 'red';
+    c.fillRect(10, 35, 50, 50);
+    c.strokeStyle = 'blue';
+    c.lineWidth = 5;
+    c.strokeRect(10, 35, 50, 50);
+    c.stroke();
+    c.closePath();
+
+    //Triangle
+    c.beginPath();
+    c.moveTo( 50, 100);
+    c.lineTo( 75, 150);
+    c.lineTo( 30, 150);
+    c.closePath();
+    c.fillStyle = 'green';
+    c.fill();
+    c.strokeStyle = 'yellow';
+    c.lineWidth = 2;
+    c.stroke(); 
+
+    c.beginPath();
+    c.moveTo( 50, 100);
+    c.lineTo( 75, 150);
+    c.moveTo( 50, 100);
+    c.lineTo( 30, 150);
+    c.moveTo( 30, 150);
+    c.lineTo( 75, 150);
+    c.strokeStyle = 'red';
+    c.lineWidth = 2;
+    c.stroke();
+    c.closePath(); */
+
+  </script>
+</body>
+</html>
